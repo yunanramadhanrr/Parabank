@@ -1,4 +1,4 @@
-package stepDefinitions; // Sesuaikan dengan nama folder Anda
+package MyStepDef; // Sesuaikan dengan nama folder Anda
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
