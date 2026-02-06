@@ -1,25 +1,30 @@
-# 🧪 ParaBank Automation Testing (BDD Framework)
+# Parabank UI Automation Testing
 
-Proyek ini adalah framework otomatisasi pengujian untuk website **ParaBank** menggunakan pendekatan **Behavior-Driven Development (BDD)**. Framework ini dirancang agar mudah dibaca oleh tim bisnis namun tetap teknis untuk tim pengembang.
+Proyek ini adalah framework otomasi pengujian UI untuk website **ParaBank** menggunakan **Java**, **Selenium WebDriver**, dan **Cucumber (BDD)**.
 
-## 🚀 Fitur Utama
-- **BDD Implementation**: Menggunakan Cucumber dengan Gherkin dalam Bahasa Indonesia.
-- **Robust Locators**: Penggunaan ID, CSS Selectors, dan XPath yang efisien.
-- **Hooks Management**: Penanganan otomatis pembukaan dan penutupan browser (`@Before` & `@After`).
-- **Data-Driven Testing**: Implementasi `DataTable` untuk menangani banyak input data sekaligus.
+## 🚀 Fitur yang Diuji
+* **Registrasi Akun:** Validasi pendaftaran berhasil dan penanganan error kata sandi tidak cocok.
+* **Login:** Validasi login berhasil (Positive) dan gagal (Negative).
 
-## 🛠️ Teknologi yang Digunakan
-* **Bahasa Pemrograman**: Java 17+
-* **Automasi Browser**: Selenium WebDriver
-* **Test Runner**: JUnit 4
-* **BDD Framework**: Cucumber
-* **Dependency Management**: Maven
-* **Driver Management**: WebDriverManager
+## 🛠️ Tech Stack
+* **Language:** Java 25
+* **Automation:** Selenium WebDriver
+* **BDD Framework:** Cucumber
+* **Test Runner:** JUnit 4
+* **Build Tool:** Maven
 
-## 📁 Struktur Proyek
-```text
-src/test/java
-├── MyStepDef       # Logika langkah pengujian & Hooks
-├── runner          # Pemicu eksekusi pengujian (TestRunner)
-src/test/resources
-└── features        # Skenario pengujian (Gherkin .feature)
+## 📂 Struktur Proyek
+* `src/test/resources/features`: Berisi skenario pengujian dalam bahasa Gherkin (.feature).
+* `src/test/java/MyStepDef`: Berisi implementasi kode dari langkah-langkah Gherkin.
+* `src/test/java/runner`: Berisi TestRunner untuk mengeksekusi tes.
+
+## 🏃 Cara Menjalankan Tes
+1. Clone repository ini.
+2. Pastikan Google Chrome terinstal di komputer Anda.
+3. Buka proyek di IntelliJ IDEA.
+4. Update dependencies menggunakan Maven: `mvn clean install`.
+5. Jalankan file `TestRunner.java`.
+
+## 📊 Laporan Pengujian
+Setelah tes selesai dijalankan, laporan akan otomatis dibuat di:
+`target/cucumber-report.html`
